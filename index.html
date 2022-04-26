@@ -82,6 +82,14 @@
                                 <i class="fa-solid fa-ellipsis-vertical fs-4 fontGrey"></i>
                             </div>
                         </div>
+                        <!-- chat -->
+                        <div class="p-5 chatBack">
+                            <ul class="chatMessage d-flex flex-column">
+                                <li class="py-2 pb-3 pe-5 ps-2 mb-2 chatDisplay" @click="Changemessage(i)" id="message" v-for="(elm,index) in contacts[thisActiveIndex].messages" :class="(elm.status == 'sent') ? 'align-self-end sent' : 'align-self-start received'" >
+                                    {{elm.message}}
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

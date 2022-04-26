@@ -7,6 +7,7 @@
     --border: rgba(214, 214, 214, 1);
     --ff6-color: rgba(177, 177, 177, 1);
     --desktop-notification: rgba(142, 218, 252, 1);
+    --sentMsg:rgba(213, 249, 186, 1)
 
 
 
@@ -41,6 +42,10 @@ body{
     padding: 0 !important;
 }
 
+.col-8{
+    padding: 0 !important;
+}
+
 .imgAvatar{
     height: 80px;
 }
@@ -67,13 +72,35 @@ body{
     width: 100%;
 }
 
-.ListaContatti{
+.ListaContatti,
+.chatMessage{
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-/* .listaContatti :hover{
-    background-color: lightgrey;
+.listaContatti,
+li:hover{
+    background-color: whitesmoke;
     cursor: pointer;
-} */
+}
+
+
+.chatBack{
+    background-image: url(../img/mine.jpg);
+    height: 100%;
+}
+
+.chatDisplay{
+    position: relative;
+}
+
+.sent{
+    border-radius: 10px;
+    background-color: var(--sentMsg);
+}
+
+.received{
+    border-radius: 10px;
+    background-color: #ffff;
+}

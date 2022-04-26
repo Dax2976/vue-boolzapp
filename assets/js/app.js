@@ -165,5 +165,10 @@ const app = new Vue({
                 ],
             }
         ]
+    },
+    methdos:{
+        Changemessage(i){
+            this.activeMessage = i
+        }
     }
 })
