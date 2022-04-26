@@ -38,8 +38,51 @@
                                 <u>Attiva Notifiche Desktop</u>
                             </span>
                         </div>
+                        <div class="p-1 bg-light">
+                            <div class="chatReserch d-flex align-items-center p-1">
+                                <span class="mx-2 pe-1">
+                                    <i class="fa-solid fa-magnifying-glass fontGrey fs-4"></i>
+                                </span>
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" aria-describedby="basic-addon1" class="form-controll">
+                            </div>
+                        </div>
+                        <div class="">
+                            <ul class="ListaContatti">
+                                <li class="py-2 d-flex border-bottom px-3" v-for="(user,index) in contacts">
+                                    <div class="">
+                                        <img :src="'./img/avatar' + user.avatar + '.jpg'" alt="" class="imgAvatar rounded-circle">
+                                    </div>
+                                    <div class="ms-3 d-flex justify-content-between w-100">
+                                        <div class="">
+                                            {{user.name}}
+                                            <p class="fontGrey">Ultimo messaggio inviato</p>
+                                        </div>
+                                        <div class="fontGrey">
+                                            <p>12:00</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    
+                    <div class="col-8 d-flex flex-column justify-content-between">
+                        <div class="p-2 d-flex aling-items-center justify-content-between" style="background-color: var(--bg-utenti);">
+                            <div class="d-flex align-items-center">
+                                <img :src="`./img/avatar${contacts[thisActiveIndex].avatar}.jpg`" alt="" class="rounded-circle imgAvatar mright">
+                                <div class="">
+                                    <span class="fw-bold">{{contacts[thisActiveIndex].name}}</span>
+                                    <div class="text-secondary">
+                                        Ultimo accesso oggi
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <i class="fa-solid fa-magnifying-glass fontGrey fs-4"></i>
+                                <i class="fa-solid fa-paperclip fontGrey fs-4"></i>
+                                <i class="fa-solid fa-ellipsis-vertical fs-4 fontGrey"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- /utenti  -->

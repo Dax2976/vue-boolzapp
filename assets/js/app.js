@@ -1,10 +1,7 @@
 const app = new Vue({
     el:'#app',
     data:{
-        user:{
-            name:'Sofia',
-            avatar:'_io'
-        },
+        thisActiveIndex:0,
         contacts: [
             {
                 name: 'Michele',
