@@ -4,6 +4,11 @@
     --bg-bg: rgba(220, 219, 210, 1);
     --bg-utenti: rgba(234, 234, 234, 1);
     --bg-chat-enter: rgba(243, 238, 234, 1);
+    --border: rgba(214, 214, 214, 1);
+    --ff6-color: rgba(177, 177, 177, 1);
+    --desktop-notification: rgba(142, 218, 252, 1);
+
+
 
 }
 
@@ -29,4 +34,29 @@ body{
 
 .initialRow{
     min-height: 95vh;
+}
+.col-4{
+    flex: 0 0 auto;
+    width: 33%;
+}
+
+.imgAvatar{
+    height: 80px;
+}
+
+.mright{
+    margin-right: 0.5rem ;
+}
+
+.fontGrey{
+    color: var(--ff6-color);
+}
+
+
+.bg-notification{
+    background-color: var(--desktop-notification);
+}
+
+.textNotify{
+    color: var(--desktop-notification);
 }
