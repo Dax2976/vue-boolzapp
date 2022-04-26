@@ -1,3 +1,14 @@
+
+:root{
+    --bg-green: rgba(0, 150, 136, 1);
+    --bg-bg: rgba(220, 219, 210, 1);
+    --bg-utenti: rgba(234, 234, 234, 1);
+    --bg-chat-enter: rgba(243, 238, 234, 1);
+
+}
+
+
+
 *{
     margin: 0;
     padding: 0;
