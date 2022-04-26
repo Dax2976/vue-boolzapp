@@ -87,7 +87,11 @@
                             <ul class="chatMessage d-flex flex-column">
                                 <li class="py-2 pb-3 pe-5 ps-2 mb-2 chatDisplay" @click="Changemessage(i)" id="message" v-for="(elm,index) in contacts[thisActiveIndex].messages" :class="(elm.status == 'sent') ? 'align-self-end sent' : 'align-self-start received'" >
                                     {{elm.message}}
+                                    <span class="date fontGrey">
+                                        {{elm.date}}
+                                    </span>
                                 </li>
+                               
                             </ul>
                         </div>
                         <div class="p-1 bgChat">
