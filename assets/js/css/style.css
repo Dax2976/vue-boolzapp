@@ -14,3 +14,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    margin: 0;
+}
+
+.background{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, var(--bg-green) 0px, var(--bg-green) 15vh, var(--bg-bg) 15vh, var(--bg-bg) 100% );
+}
+.containerMain{
+    background-color: var(--bg-utenti);
+}
+
+.initialRow{
+    min-height: 95vh;
+}
