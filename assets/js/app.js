@@ -2,6 +2,7 @@ const app = new Vue({
     el:'#app',
     data:{
         thisActiveIndex:0,
+        NewMessage1: '',
         contacts: [
             {
                 name: 'Michele',
@@ -167,8 +168,42 @@ const app = new Vue({
         ]
     },
     methdos:{
+        // Changecontacts(index){
+        //     this.thisActiveIndex = index
+        //     console.log(`${thisActiveIndex}`)
+        // },
+
         Changemessage(i){
             this.activeMessage = i
+        },
+
+        NewSendMessage(index){
+            let NewMessage = {
+                date: '10/01/2020',
+                message: this.NewMessage1,
+                status: 'sent'
+            }
+            if(NewMessage.message.length>0){
+                this.contatcts[index].message.push(NewMessage1)
+            }
+
+            setTimeout(
+                ()=>{
+                    this.contacts[index].message.push({
+                        date: '10/01/2020 15:50:00',
+                        message:'Ok',
+                        status: 'received',
+
+
+                    },1000)
+                } 
+            )
+            // this.contacts[index].messages.push({
+            //     date: '10/01/2020 15:50:00',
+            //     message: this.NewMessage,
+            //     status: 'sent',
         }
+
+        
     }
 })

@@ -48,7 +48,7 @@
                         </div>
                         <div class="">
                             <ul class="ListaContatti">
-                                <li class="py-2 d-flex border-bottom px-3" v-for="(user,index) in contacts">
+                                <li @click="thisActiveIndex = index" class="py-2 d-flex border-bottom px-3" v-for="(user,index) in contacts">
                                     <div class="">
                                         <img :src="'./img/avatar' + user.avatar + '.jpg'" alt="" class="imgAvatar rounded-circle">
                                     </div>
@@ -97,7 +97,7 @@
                         <div class="p-1 bgChat">
                             <div class="chatReserch d-flex aling-items-center">
                                 <span class="mx-2 pe-1"><i class="fa-regular fa-face-smile fs-3 p-2 fontGrey"></i></span>
-                                <input type="text" placeholder="Scrivi Un Messaggio" class="form-control" aria-describedby="basic-addon1">
+                                <input type="text" placeholder="Scrivi Un Messaggio" class="form-control" aria-describedby="basic-addon1" @keyup.enter="NewSendMessage(thisActiveIndex)" v-model="NewMessage1">
                                 <i class="fa-solid fa-microphone fs-4 mx-2 p-2 fontGrey"></i>
                             </div>
                         </div>
