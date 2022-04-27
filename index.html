@@ -43,12 +43,12 @@
                                 <span class="mx-2 pe-1">
                                     <i class="fa-solid fa-magnifying-glass fontGrey fs-4"></i>
                                 </span>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat" class="form-control" aria-describedby="basic-addon1">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" class="form-control" aria-describedby="basic-addon1" v-model="searchInput">
                             </div>
                         </div>
                         <div class="">
                             <ul class="ListaContatti">
-                                <li @click="thisActiveIndex = index" class="py-2 d-flex border-bottom px-3" v-for="(user,index) in contacts">
+                                <li @click="thisActiveIndex = index" class="py-2 d-flex border-bottom px-3" v-for="(user,index) in contacts" :class="[(user.name.toLowerCase().includes(searchInput.toLowerCase())) ? '' : 'd-none' ,{ active : contacts.visible == user } ]">
                                     <div class="">
                                         <img :src="'./img/avatar' + user.avatar + '.jpg'" alt="" class="imgAvatar rounded-circle">
                                     </div>
@@ -85,7 +85,7 @@
                         <!-- chat -->
                         <div class="p-5 chatBack">
                             <ul class="chatMessage d-flex flex-column">
-                                <li class="py-2 pb-3 pe-5 ps-2 mb-2 chatDisplay" @click="Changemessage(i)" id="message" v-for="(elm,index) in contacts[thisActiveIndex].messages" :class="(elm.status == 'sent') ? 'align-self-end sent' : 'align-self-start received'" >
+                                <li class="py-2 pb-3 pe-5 ps-2 mb-2 chatDisplay" @click="Changemessage(index)" id="message" v-for="(elm,index) in contacts[thisActiveIndex].messages" :class="(elm.status == 'sent') ? 'align-self-end sent' : 'align-self-start received'" >
                                     {{elm.message}}
                                     <span class="date fontGrey">
                                         {{elm.date}}
@@ -97,7 +97,7 @@
                         <div class="p-1 bgChat">
                             <div class="chatReserch d-flex aling-items-center">
                                 <span class="mx-2 pe-1"><i class="fa-regular fa-face-smile fs-3 p-2 fontGrey"></i></span>
-                                <input type="text" placeholder="Scrivi Un Messaggio" class="form-control" aria-describedby="basic-addon1" @keyup.enter="NewSendMessage(thisActiveIndex)" v-model="NewMessage1">
+                                <input type="text" placeholder="Scrivi Un Messaggio" class="form-control" aria-describedby="basic-addon1" @keyup.enter="(NewSendMessage(thisActiveIndex))" v-model="NewMessage1">
                                 <i class="fa-solid fa-microphone fs-4 mx-2 p-2 fontGrey"></i>
                             </div>
                         </div>

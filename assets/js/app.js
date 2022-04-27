@@ -3,6 +3,7 @@ const app = new Vue({
     data:{
         thisActiveIndex:0,
         NewMessage1: '',
+        searchInput: '',
         contacts: [
             {
                 name: 'Michele',
@@ -167,7 +168,7 @@ const app = new Vue({
             }
         ]
     },
-    methdos:{
+    methods:{
         // Changecontacts(index){
         //     this.thisActiveIndex = index
         //     console.log(`${thisActiveIndex}`)
@@ -184,26 +185,18 @@ const app = new Vue({
                 status: 'sent'
             }
             if(NewMessage.message.length>0){
-                this.contatcts[index].message.push(NewMessage)
+                this.contacts[index].messages.push(NewMessage)
             }
 
             setTimeout(
                 ()=>{
-                    this.contacts[index].message.push({
+                    this.contacts[index].messages.push({
                         date: dayjs().format('DD/MM/YY HH.MM'),
                         message:'Ok',
-                        status: 'received',
-
-
+                        status: 'received'
                     },1000)
                 } 
             )
-            // this.contacts[index].messages.push({
-            //     date: '10/01/2020 15:50:00',
-            //     message: this.NewMessage,
-            //     status: 'sent',
-        }
-
-        
-    }
+        },  
+    },
 })
