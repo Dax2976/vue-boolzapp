@@ -179,18 +179,18 @@ const app = new Vue({
 
         NewSendMessage(index){
             let NewMessage = {
-                date: '10/01/2020',
+                date: dayjs().format('DD/MM/YY HH.MM'),
                 message: this.NewMessage1,
                 status: 'sent'
             }
             if(NewMessage.message.length>0){
-                this.contatcts[index].message.push(NewMessage1)
+                this.contatcts[index].message.push(NewMessage)
             }
 
             setTimeout(
                 ()=>{
                     this.contacts[index].message.push({
-                        date: '10/01/2020 15:50:00',
+                        date: dayjs().format('DD/MM/YY HH.MM'),
                         message:'Ok',
                         status: 'received',
 
