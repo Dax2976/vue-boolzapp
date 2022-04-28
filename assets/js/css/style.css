@@ -40,6 +40,7 @@ body{
 
 .initialRow{
     min-height: 95vh;
+    border: 1px solid lightgray !important;
 }
 .col-4{
     flex: 0 0 auto;
@@ -143,6 +144,6 @@ li:hover{
 
 }
 
-    .dropdownitem:hover{
+.dropdownitem:hover{
         cursor: pointer;
-    }
+}
