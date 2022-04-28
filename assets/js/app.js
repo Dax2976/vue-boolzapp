@@ -1,6 +1,7 @@
 const app = new Vue({
     el:'#app',
     data:{
+        activeMessage:null,
         thisActiveIndex:0,
         NewMessage1: '',
         searchInput: '',
@@ -187,6 +188,7 @@ const app = new Vue({
             if(NewMessage.message.length>0){
                 this.contacts[index].messages.push(NewMessage)
             }
+            this.NewMessage1 = ''
 
             setTimeout(
                 ()=>{
@@ -198,5 +200,9 @@ const app = new Vue({
                 } 
             )
         },  
+        MsgDeleted(yes){
+            this.contacts[this.thisActiveIndex].messages.splice(yes,1)
+            this.activeMessage = null
+        }
     },
 })
