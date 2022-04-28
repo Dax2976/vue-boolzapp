@@ -121,7 +121,7 @@ li:hover{
 .ChevronD{
     position: absolute;
     cursor: pointer;
-    display: none;
+    display: none !important;
     top: 3px;
     right: 9px;
 
@@ -129,7 +129,7 @@ li:hover{
 
 
 .chatDisplay:hover .ChevronD{
-    display: block;
+    display: block !important;
 }
 
 .dDown{
@@ -146,4 +146,5 @@ li:hover{
 
 .dropdownitem:hover{
     cursor: pointer;
+    background-color: var(--ff6-color);
 }
