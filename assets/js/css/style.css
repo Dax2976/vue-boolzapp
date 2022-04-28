@@ -34,6 +34,10 @@ body{
     background-color: var(--bg-utenti);
 }
 
+.txtblack{
+    color: black;
+}
+
 .initialRow{
     min-height: 95vh;
 }
@@ -112,3 +116,33 @@ li:hover{
     right: 3px;
     padding: 3px 3px;
 }
+
+.ChevronD{
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    top: 3px;
+    right: 9px;
+
+}
+
+
+.chatDisplay:hover .ChevronD{
+    display: block;
+}
+
+.dDown{
+    border: 1px solid black;
+    z-index: 10;
+    width: 100px;
+    right: 9px;
+    top: 30px;
+    position: absolute;
+    box-shadow: black;
+    background-color: white;
+
+}
+
+    .dropdownitem:hover{
+        cursor: pointer;
+    }

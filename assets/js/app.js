@@ -5,6 +5,7 @@ const app = new Vue({
         thisActiveIndex:0,
         NewMessage1: '',
         searchInput: '',
+        show:false,
         contacts: [
             {
                 name: 'Michele',

@@ -87,10 +87,10 @@
                             <ul class="chatMessage d-flex flex-column">
                                 <li class="py-2 pb-3 pe-5 ps-2 mb-2 chatDisplay" @click="Changemessage(index)" id="message" v-for="(elm,index) in contacts[thisActiveIndex].messages" :class="(elm.status == 'sent') ? 'align-self-end sent' : 'align-self-start received'" >
                                     {{elm.message}}
-                                    <i class="fa-solid fa-chevron-down" @click="show = !show"></i>
+                                    <i class="fa-solid fa-chevron-down ChevronD fontGrey" @click="show = !show"></i>
                                     <div class="dDown" v-show="show" v-if="index == activeMessage">
-                                        <div class="dropdownitem p-2 text-center pt-2">Message Info</div>
-                                        <div class="dropdownitem p-2 pb-2 text-center" @click="MsgDeleted(activeMessage)">Delete Message</div>
+                                        <div class="dropdownitem p-2 text-center pt-2 txtblack">Message Info</div>
+                                        <div class="dropdownitem p-2 pb-2 text-center txtblack" @click="MsgDeleted(activeMessage)">Delete Message</div>
                                     </div>
                                     <span class="date fontGrey">
                                         {{elm.date}}
